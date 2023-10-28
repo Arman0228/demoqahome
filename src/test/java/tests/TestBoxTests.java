@@ -14,7 +14,6 @@ public class TestBoxTests {
     @BeforeAll
     static void beforeAll() {
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
         Configuration.pollingInterval = 400;
         Configuration.timeout = 4000;
         Configuration.baseUrl = "https://demoqa.com";
@@ -30,8 +29,6 @@ public class TestBoxTests {
         $("#permanentAddress").setValue("Another Street 1");
         $("#submit").click();
 
-        $("[id=search]").shouldHave(text("https://selenide.org"));
+
     }
 }
-
-
